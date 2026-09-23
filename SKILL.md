@@ -15,37 +15,37 @@ expertise_level: expert
 
 ## When to use
 
-- Halaman/komponen, routing, state, form, tabel, modal
-- Integrasi API (loading/empty/error), pagination UI
-- Accessibility dasar + performa render
+- Pages/components, routing, state, forms, tables, modals
+- API integration (loading/empty/error), pagination UI
+- Basic accessibility + render performance
 
 ## When not to use
 
-- Desain flow/mockup/theme gate -> `ui-ux-design`
-- Hanya token/brand system murni -> `canvas-design` / Design System role
-- Hanya kontrak API -> `api-engineering`
+- Flow/mockup/theme gate design -> `ui-ux-design`
+- Pure token/brand system only -> `canvas-design` / Design System role
+- API contract only -> `api-engineering`
 - Browser E2E automation -> `browser-automation`
 
 ## Procedure
 
-1. **Theme lock** - Pastikan implementasi mengikuti tema project aktif (hasil gate `ui-ux-design` / UI existing); jangan mengganti arah visual diam-diam.
-2. **One job per view** - Satu tujuan jelas; hormati design system / UI rule project.
-2. **States** - Loading, empty, error, success selalu ditangani.
-3. **Data** - Fetch sesuai kontrak; jangan asumsikan shape array jika envelope `items/meta`.
-4. **A11y** - Label, fokus keyboard, kontras; modal trap fokus & restore.
-5. **Performance** - Hindari re-render berat; list besar paginated; lazy route/assets bila perlu.
-6. **Security** - Jangan simpan secret di bundle; sanitize URL/HTML berbahaya.
-7. **Verify** - Manual atau `browser-automation`; responsive smoke.
+1. **Theme lock** - Ensure implementation follows the active project theme (result of `ui-ux-design` gate / existing UI); do not silently change visual direction.
+2. **One job per view** - One clear goal; respect project design system / UI rules.
+2. **States** - Loading, empty, error, and success are always handled.
+3. **Data** - Fetch per contract; do not assume array shape if envelope is `items/meta`.
+4. **A11y** - Labels, keyboard focus, contrast; modal focus trap & restore.
+5. **Performance** - Avoid heavy re-renders; paginate large lists; lazy-load routes/assets when needed.
+6. **Security** - Do not store secrets in the bundle; sanitize unsafe URL/HTML.
+7. **Verify** - Manual or `browser-automation`; responsive smoke test.
 
 Detail: `reference.md`.
 
 ## DoD
 
-- [ ] States lengkap; a11y dasar OK
-- [ ] Selaras kontrak API + pagination
-- [ ] Modal tidak merusak layout/performa
-- [ ] Tidak ada dead UI / handler kosong
-- [ ] Evidence smoke atau blocker
+- [ ] Complete states; basic a11y OK
+- [ ] Aligned with API contract + pagination
+- [ ] Modal does not break layout/performance
+- [ ] No dead UI / empty handlers
+- [ ] Smoke evidence or blocker documented
 
 ## Attribution
 
